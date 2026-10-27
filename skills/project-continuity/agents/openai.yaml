@@ -1,0 +1,10 @@
+interface:
+  display_name: "Project Continuity"
+  short_description: "Preserve project context and track meaningful progress"
+  default_prompt: "Use $project-continuity to review and update this project's durable context and progress."
+
+policy:
+  allow_implicit_invocation: true
+
+
+
