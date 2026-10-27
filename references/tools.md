@@ -71,4 +71,3 @@ The check is read-only. It checks the overview and topic Markdown files for miss
 Defaults are 50 topic-index entries and 500 lines per memory file. Adjust them with `--max-index-entries` and `--max-file-lines`. Use `--memory-file` for an established overview path other than `PROJECT_MEMORY.md`; the topic scan still uses the root `project-memory/` directory.
 
 The process exits with status 1 if it finds a missing file or any warning, 2 for invalid command arguments or an inaccessible root, and 0 if no issue is found. A clean result does not verify that the memory is factually or semantically consistent with the project.
-

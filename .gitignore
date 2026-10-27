@@ -1,0 +1,15 @@
+# Python and local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Local review archives and staging copies
+*.zip
+_install_staging/
+_source_candidate/
+_v5_inspect/

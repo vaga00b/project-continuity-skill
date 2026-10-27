@@ -24,7 +24,7 @@ When the same repository is used with both Codex and Claude Code, add the same c
 
 ## Claude.ai
 
-Use the same `project-continuity/` skill folder as Codex and Claude Code. Download or clone the repository and compress `skills/project-continuity/` only when uploading to Claude.ai; keep `SKILL.md` directly inside the `project-continuity/` folder in the archive. No separate Claude.ai source or prebuilt ZIP is maintained.
+The repository root is the same skill folder used by Codex and Claude Code. Download or clone it into a folder named `project-continuity` and compress that folder only when uploading to Claude.ai; keep `SKILL.md` directly inside the `project-continuity/` folder in the archive. No separate Claude.ai source or prebuilt ZIP is maintained.
 
 Enable Code execution and file creation, then open **Customize → Skills → + Create skill → Upload a skill** and upload the archive. Enable the skill and ask Claude to use `project-continuity`. See the current [Claude Skills guide](https://support.claude.com/en/articles/12512180-use-skills-in-claude) for account requirements and interface details.
 

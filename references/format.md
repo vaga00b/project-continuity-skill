@@ -42,4 +42,3 @@ Keep the file concise and remove empty sections.
 ```
 
 Use the local timezone/date convention of the project. A progress entry should capture only a meaningful change. Link relevant paths with repository-relative links when practical. For a decision that has been superseded, keep the original entry and add a newer entry that names the replacement and its reason; revise the current snapshot so it describes the active state.
-

@@ -10,7 +10,7 @@ Install the skill for your assistant and invoke it at the start of a project con
 
 - **OpenAI Codex:** install the skill folder in a Codex skill directory, then type `$project-continuity`.
 - **Claude Code:** install it in a Claude Code skill directory, then type `/project-continuity`.
-- **Claude.ai:** use the same `skills/project-continuity/` folder and follow the upload steps below. Enable the skill, then ask Claude to use `project-continuity`. Provide the project files Claude needs to read or update.
+- **Claude.ai:** use the same repository files and follow the upload steps below. Enable the skill, then ask Claude to use `project-continuity`. Provide the project files Claude needs to read or update.
 
 For [installation details](#install), see below. See the FAQ for use across conversations.
 
@@ -71,11 +71,11 @@ The skill does not detect every stale decision or archive files automatically. I
 
 ## Install
 
-All three platforms use the same `skills/project-continuity/` folder. The repository maintains one skill source; platform setup instructions are included in its `references/platforms.md`.
+The repository root is the skill folder: `SKILL.md`, `references/`, `scripts/`, and `agents/` sit alongside `README.md` and one `LICENSE`. Download or clone the repository into a folder named `project-continuity`. All three platforms use this same folder; setup instructions are included in `references/platforms.md`.
 
 ### OpenAI Codex
 
-Copy `skills/project-continuity/` into either:
+Copy the downloaded `project-continuity/` folder into either:
 
 - User-level: `%USERPROFILE%\.codex\skills\project-continuity` on Windows, or `~/.codex/skills/project-continuity` on macOS/Linux.
 - Project-level: `.agents/skills/project-continuity/` in the repository.
@@ -84,7 +84,7 @@ Invoke with `$project-continuity`. The `$` prefix is Codex's skill invocation sy
 
 ### Claude Code
 
-Copy `skills/project-continuity/` into either:
+Copy the downloaded `project-continuity/` folder into either:
 
 - User-level: `%USERPROFILE%\.claude\skills\project-continuity` on Windows, or `~/.claude/skills/project-continuity` on macOS/Linux.
 - Project-level: `.claude/skills/project-continuity/` in the repository.
@@ -94,7 +94,7 @@ Invoke with `/project-continuity`. The `/` prefix is Claude Code's skill command
 ### Claude.ai
 
 1. Enable **Code execution and file creation** (the label may vary by account or interface).
-2. Download or clone this repository. Compress the `skills/project-continuity/` folder for upload, keeping `SKILL.md` directly inside the `project-continuity/` folder in the archive. Claude.ai requires a ZIP at its upload step; use this same source folder.
+2. Download or clone this repository into a folder named `project-continuity`, then compress that folder for upload. Keep `SKILL.md` directly inside the `project-continuity/` folder in the archive. Claude.ai requires a ZIP at its upload step; use this same source folder.
 3. Open **Customize → Skills → + Create skill → Upload a skill**, upload the archive you just created, and enable the skill.
 4. In a conversation, ask Claude to use `project-continuity`; attach the relevant project files or make them available through a Claude Project.
 
@@ -130,7 +130,7 @@ python <skill-dir>/scripts/init_memory.py --project-root . --platform codex
 python <skill-dir>/scripts/check_memory_health.py --project-root .
 ```
 
-For Claude Code, set the platform to `--platform claude`. On Windows, use `py -3` if `python` is unavailable. The repository file `skills/project-continuity/references/tools.md` lists all options.
+For Claude Code, set the platform to `--platform claude`. On Windows, use `py -3` if `python` is unavailable. The repository file `references/tools.md` lists all options.
 
 ## Disable or remove it
 
@@ -164,11 +164,11 @@ Report bugs and suggestions in the GitHub repository where you found the skill. 
 ## Package contents
 
 ```text
-LICENSE
-README.md
-skills/project-continuity/
-├── SKILL.md
+project-continuity/
+├── .gitignore
 ├── LICENSE
+├── README.md
+├── SKILL.md
 ├── agents/
 │   └── openai.yaml
 ├── references/
@@ -203,7 +203,7 @@ This project is licensed under the [PolyForm Noncommercial License 1.0.0](./LICE
 
 - **OpenAI Codex：** 将 Skill 目录安装到 Codex 的技能目录，然后输入 `$project-continuity`。
 - **Claude Code：** 将 Skill 目录安装到 Claude Code 的技能目录，然后输入 `/project-continuity`。
-- **Claude.ai：** 使用同一个 `skills/project-continuity/` 文件夹，按下方步骤上传并启用，再请 Claude 使用 `project-continuity`。同时提供 Claude 需要读取或更新的项目文件。
+- **Claude.ai：** 使用同一份仓库文件，按下方步骤上传并启用，再请 Claude 使用 `project-continuity`。同时提供 Claude 需要读取或更新的项目文件。
 
 [安装说明](#安装)见下文。跨对话的用法见常见问题。
 
@@ -264,11 +264,11 @@ Skill 不会自动检测所有过时决定，也不会自动归档文件。主�
 
 ## 安装
 
-三个平台都使用同一个 `skills/project-continuity/` 文件夹。仓库只维护一份 Skill 源码，平台配置说明包含在其中的 `references/platforms.md` 中。
+仓库根目录就是 Skill 目录：`SKILL.md`、`references/`、`scripts/` 和 `agents/` 与 `README.md`、唯一一份 `LICENSE` 放在同一层。下载或克隆仓库后，将文件夹命名为 `project-continuity`。三个平台都使用这个文件夹，平台配置说明见 `references/platforms.md`。
 
 ### OpenAI Codex
 
-将 `skills/project-continuity/` 复制到以下任一目录：
+将下载后的 `project-continuity/` 文件夹复制到以下任一目录：
 
 - 用户级：Windows 使用 `%USERPROFILE%\.codex\skills\project-continuity`；macOS/Linux 使用 `~/.codex/skills/project-continuity`。
 - 项目级：将 Skill 放在仓库的 `.agents/skills/project-continuity/`。
@@ -277,7 +277,7 @@ Skill 不会自动检测所有过时决定，也不会自动归档文件。主�
 
 ### Claude Code
 
-将 `skills/project-continuity/` 复制到以下任一目录：
+将下载后的 `project-continuity/` 文件夹复制到以下任一目录：
 
 - 用户级：Windows 使用 `%USERPROFILE%\.claude\skills\project-continuity`；macOS/Linux 使用 `~/.claude/skills/project-continuity`。
 - 项目级：将 Skill 放在仓库的 `.claude/skills/project-continuity/`。
@@ -287,7 +287,7 @@ Skill 不会自动检测所有过时决定，也不会自动归档文件。主�
 ### Claude.ai
 
 1. 启用 **Code execution and file creation**。不同账户或界面版本的选项名称可能略有不同。
-2. 下载或克隆本仓库，将 `skills/project-continuity/` 文件夹压缩用于上传。压缩包中的 `project-continuity/` 文件夹下应直接包含 `SKILL.md`。Claude.ai 的上传入口要求 ZIP，使用的仍是同一份源码文件夹。
+2. 下载或克隆本仓库，将文件夹命名为 `project-continuity`，再将该文件夹压缩用于上传。压缩包中的 `project-continuity/` 文件夹下应直接包含 `SKILL.md`。Claude.ai 的上传入口要求 ZIP，使用的仍是同一份源码文件夹。
 3. 打开 **Customize → Skills → + Create skill → Upload a skill**，上传刚生成的压缩包并启用。
 4. 对话时请 Claude 使用 `project-continuity`，并附上需要读取的项目文件，或通过 Claude Project 提供。
 
@@ -323,7 +323,7 @@ python <skill-dir>/scripts/init_memory.py --project-root . --platform codex
 python <skill-dir>/scripts/check_memory_health.py --project-root .
 ```
 
-初始化 Claude Code 项目时，将平台参数改为 `--platform claude`。Windows 上若 `python` 不可用，可改用 `py -3`。所有参数见仓库中的 `skills/project-continuity/references/tools.md`。
+初始化 Claude Code 项目时，将平台参数改为 `--platform claude`。Windows 上若 `python` 不可用，可改用 `py -3`。所有参数见仓库中的 `references/tools.md`。
 
 ## 禁用或移除
 
@@ -357,11 +357,11 @@ python <skill-dir>/scripts/check_memory_health.py --project-root .
 ## 包含哪些文件
 
 ```text
-LICENSE
-README.md
-skills/project-continuity/
-├── SKILL.md
+project-continuity/
+├── .gitignore
 ├── LICENSE
+├── README.md
+├── SKILL.md
 ├── agents/
 │   └── openai.yaml
 ├── references/

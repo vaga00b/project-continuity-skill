@@ -49,4 +49,3 @@ If no index entry matches, inspect the code and continue normally. Add a topic n
 When recording a meaningful result, update the detailed note closest to the topic and add or revise its index row. Keep the overview's current snapshot accurate and its progress log concise. If a note covers unrelated topics or becomes unwieldy, split it along stable module or subject boundaries and repair the index links. Preserve evidence and mark replaced decisions as superseded rather than silently deleting history.
 
 Do not create a file per task or per conversation. Do not add scripts or strict size limits unless repeated maintenance problems show they are needed. Keep secrets out of every memory file.
-
