@@ -165,7 +165,6 @@ Report bugs and suggestions in the GitHub repository where you found the skill. 
 
 ```text
 project-continuity/
-├── .gitignore
 ├── LICENSE
 ├── README.md
 ├── SKILL.md
@@ -358,7 +357,6 @@ python <skill-dir>/scripts/check_memory_health.py --project-root .
 
 ```text
 project-continuity/
-├── .gitignore
 ├── LICENSE
 ├── README.md
 ├── SKILL.md
