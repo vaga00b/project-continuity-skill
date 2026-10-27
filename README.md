@@ -10,7 +10,7 @@ Install the skill for your assistant and invoke it at the start of a project con
 
 - **OpenAI Codex:** install the skill folder in a Codex skill directory, then type `$project-continuity`.
 - **Claude Code:** install it in a Claude Code skill directory, then type `/project-continuity`.
-- **Claude.ai:** upload the included ZIP under **Customize → Skills**, enable it, then ask Claude to use `project-continuity`. Provide the project files Claude needs to read or update.
+- **Claude.ai:** use the same `skills/project-continuity/` folder and follow the upload steps below. Enable the skill, then ask Claude to use `project-continuity`. Provide the project files Claude needs to read or update.
 
 For [installation details](#install), see below. See the FAQ for use across conversations.
 
@@ -71,6 +71,8 @@ The skill does not detect every stale decision or archive files automatically. I
 
 ## Install
 
+All three platforms use the same `skills/project-continuity/` folder. The repository maintains one skill source; platform setup instructions are included in its `references/platforms.md`.
+
 ### OpenAI Codex
 
 Copy `skills/project-continuity/` into either:
@@ -92,8 +94,8 @@ Invoke with `/project-continuity`. The `/` prefix is Claude Code's skill command
 ### Claude.ai
 
 1. Enable **Code execution and file creation** (the label may vary by account or interface).
-2. Open **Customize → Skills → + Create skill → Upload a skill**, and upload `project-continuity-claude-ai.zip`.
-3. Enable the uploaded skill.
+2. Download or clone this repository. Compress the `skills/project-continuity/` folder for upload, keeping `SKILL.md` directly inside the `project-continuity/` folder in the archive. Claude.ai requires a ZIP at its upload step; use this same source folder.
+3. Open **Customize → Skills → + Create skill → Upload a skill**, upload the archive you just created, and enable the skill.
 4. In a conversation, ask Claude to use `project-continuity`; attach the relevant project files or make them available through a Claude Project.
 
 Claude.ai cannot use Claude Code's `/project-continuity` command or read local paths on your computer. Check the current [Claude Skills guide](https://support.claude.com/en/articles/12512180-use-skills-in-claude) for account requirements and interface details.
@@ -164,9 +166,9 @@ Report bugs and suggestions in the GitHub repository where you found the skill. 
 ```text
 LICENSE
 README.md
-project-continuity-claude-ai.zip
 skills/project-continuity/
 ├── SKILL.md
+├── LICENSE
 ├── agents/
 │   └── openai.yaml
 ├── references/
@@ -179,7 +181,7 @@ skills/project-continuity/
     └── init_memory.py
 ```
 
-For Claude.ai, upload `project-continuity-claude-ai.zip`.
+Use this same skill folder for all platforms. See the installation steps above for each host.
 
 ## License
 
@@ -201,7 +203,7 @@ This project is licensed under the [PolyForm Noncommercial License 1.0.0](./LICE
 
 - **OpenAI Codex：** 将 Skill 目录安装到 Codex 的技能目录，然后输入 `$project-continuity`。
 - **Claude Code：** 将 Skill 目录安装到 Claude Code 的技能目录，然后输入 `/project-continuity`。
-- **Claude.ai：** 在 **Customize → Skills** 上传随附的 ZIP 并启用，然后请 Claude 使用 `project-continuity`。同时提供 Claude 需要读取或更新的项目文件。
+- **Claude.ai：** 使用同一个 `skills/project-continuity/` 文件夹，按下方步骤上传并启用，再请 Claude 使用 `project-continuity`。同时提供 Claude 需要读取或更新的项目文件。
 
 [安装说明](#安装)见下文。跨对话的用法见常见问题。
 
@@ -262,6 +264,8 @@ Skill 不会自动检测所有过时决定，也不会自动归档文件。主�
 
 ## 安装
 
+三个平台都使用同一个 `skills/project-continuity/` 文件夹。仓库只维护一份 Skill 源码，平台配置说明包含在其中的 `references/platforms.md` 中。
+
 ### OpenAI Codex
 
 将 `skills/project-continuity/` 复制到以下任一目录：
@@ -283,8 +287,8 @@ Skill 不会自动检测所有过时决定，也不会自动归档文件。主�
 ### Claude.ai
 
 1. 启用 **Code execution and file creation**。不同账户或界面版本的选项名称可能略有不同。
-2. 打开 **Customize → Skills → + Create skill → Upload a skill**，上传 `project-continuity-claude-ai.zip`。
-3. 在 Skills 列表中启用该 Skill。
+2. 下载或克隆本仓库，将 `skills/project-continuity/` 文件夹压缩用于上传。压缩包中的 `project-continuity/` 文件夹下应直接包含 `SKILL.md`。Claude.ai 的上传入口要求 ZIP，使用的仍是同一份源码文件夹。
+3. 打开 **Customize → Skills → + Create skill → Upload a skill**，上传刚生成的压缩包并启用。
 4. 对话时请 Claude 使用 `project-continuity`，并附上需要读取的项目文件，或通过 Claude Project 提供。
 
 Claude.ai 不能使用 Claude Code 的 `/project-continuity` 命令，也不能读取电脑上的本地路径。账户要求和界面可能变化，请查看当前的 [Claude Skills 指南](https://support.claude.com/en/articles/12512180-use-skills-in-claude)。
@@ -355,9 +359,9 @@ python <skill-dir>/scripts/check_memory_health.py --project-root .
 ```text
 LICENSE
 README.md
-project-continuity-claude-ai.zip
 skills/project-continuity/
 ├── SKILL.md
+├── LICENSE
 ├── agents/
 │   └── openai.yaml
 ├── references/
@@ -370,12 +374,11 @@ skills/project-continuity/
     └── init_memory.py
 ```
 
-在 Claude.ai 上传时，选择 `project-continuity-claude-ai.zip`。
+各平台都使用这一个 Skill 文件夹，具体操作见上方安装说明。
 
 ## 许可证
 
 本项目采用 [PolyForm Noncommercial License 1.0.0](./LICENSE)。该许可证允许非商业用途下使用、修改和分享。商业用途需要另行取得许可，具体以许可证全文为准。
-
 
 
 

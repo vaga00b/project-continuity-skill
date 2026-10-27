@@ -89,4 +89,5 @@ python "${CLAUDE_SKILL_DIR}/scripts/check_memory_health.py" --project-root .
 
 For Codex, use the installed script path as described in [references/tools.md](references/tools.md).
 
+For Claude.ai, follow the [shared platform setup](references/platforms.md#claudeai). Use project files provided in the conversation or Project; do not assume access to local computer paths or automatically loaded repository instructions.
 

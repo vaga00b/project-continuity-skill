@@ -22,8 +22,15 @@ The skill's core workflow and project memory files use the open Agent Skills for
 
 When the same repository is used with both Codex and Claude Code, add the same concise memory instruction to both `AGENTS.md` and `CLAUDE.md`, unless the repository already has an equivalent shared rule. Keep the memory itself in one shared `PROJECT_MEMORY.md` and optional `project-memory/` topic directory.
 
+## Claude.ai
+
+Use the same `project-continuity/` skill folder as Codex and Claude Code. Download or clone the repository and compress `skills/project-continuity/` only when uploading to Claude.ai; keep `SKILL.md` directly inside the `project-continuity/` folder in the archive. No separate Claude.ai source or prebuilt ZIP is maintained.
+
+Enable Code execution and file creation, then open **Customize → Skills → + Create skill → Upload a skill** and upload the archive. Enable the skill and ask Claude to use `project-continuity`. See the current [Claude Skills guide](https://support.claude.com/en/articles/12512180-use-skills-in-claude) for account requirements and interface details.
+
+Provide project instructions, existing memory, and relevant project files in the conversation or Claude Project. Claude.ai cannot read local computer paths. Keep one shared project-memory record and make the latest saved version available in each conversation. Do not assume a local `AGENTS.md` or `CLAUDE.md` is loaded automatically. Run bundled helpers only against project files available in the execution environment, and return changed files to the user without claiming that local computer files were updated.
+
 ## Other Agent Skills-compatible hosts
 
 The core `SKILL.md` and reference files can be reused where a host supports the Agent Skills format. Check that host's official documentation for skill directory, invocation, and project-instruction conventions. Adapt those integration details before claiming full host support. No background execution or guaranteed selection is provided by the format itself.
-
 
